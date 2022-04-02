@@ -30,6 +30,7 @@
         'views/templates.xml',
         'views/menu.xml',
         'views/supplier_views.xml',
+        'views/produk_views.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
