@@ -31,6 +31,8 @@
         'views/menu.xml',
         'views/supplier_views.xml',
         'views/produk_views.xml',
+        'views/pegawai_views.xml',
+        'views/pelanggan_views.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

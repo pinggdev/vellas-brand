@@ -7,4 +7,7 @@
     <!-- This Menu Item Must have a parent -->
     <menuitem id="vellas_akomodasi_menu_categ" name="Akomodasi" parent="vellas_menu_root" sequence="10"/>
 
+    <!-- This Menu Item Must have a parent -->
+    <menuitem id="vellas_partner_menu_categ" name="Partner" parent="vellas_menu_root" sequence="20"/>
+
 </odoo>
