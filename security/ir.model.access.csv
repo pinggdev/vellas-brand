@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_vellas_brand_vellas_brand,vellas_brand.vellas_brand,model_vellas_brand_vellas_brand,base.group_user,1,1,1,1
