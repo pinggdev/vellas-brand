@@ -10,4 +10,7 @@
     <!-- This Menu Item Must have a parent -->
     <menuitem id="vellas_partner_menu_categ" name="Partner" parent="vellas_menu_root" sequence="20"/>
 
+    <!-- This Menu Item Must have a parent -->
+    <menuitem id="vellas_order_menu_categ" name="Order" parent="vellas_menu_root" sequence="30"/>
+
 </odoo>
