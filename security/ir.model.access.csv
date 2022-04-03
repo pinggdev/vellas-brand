@@ -1,4 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 
 access_vellas_baju,access_vellas.baju,model_vellas_baju,,1,1,1,1
+access_vellas_celana,access_vellas.celana,model_vellas_celana,,1,1,1,1
 access_vellas_penjualan,access_vellas.penjualan,model_vellas_penjualan,,1,1,1,1

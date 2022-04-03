@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- vellas.celana tree view -->
+    <record id="vellas_celana_view_tree" model="ir.ui.view">
+        <field name="name">Daftar Produk Celana</field>
+        <field name="model">vellas.celana</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="kode_celana"/>
+                <field name="name"/>
+                <field name="tipe_celana"/>
+                <field name="ukuran_celana"/>
+                <field name="jenis_bahan"/>
+                <field name="harga"/>
+                <field name="stok"/>
+                <field name="keterangan"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- vellas.celana form view -->
+    <record id="vellas_celana_view_form" model="ir.ui.view">
+        <field name="name">Form Produk Celana</field>
+        <field name="model">vellas.celana</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="kode_celana"/>
+                        <field name="name"/>
+                        <field name="tipe_celana"/>
+                        <field name="ukuran_celana"/>
+                        <field name="jenis_bahan"/>
+                        <field name="harga"/>
+                        <field name="stok"/>
+                        <field name="keterangan"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- vellas.celana action window -->
+    <record id="vellas_celana_action" model="ir.actions.act_window">
+        <field name="name">Daftar Produk Celana</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">vellas.celana</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="vellas_celana_menu_act" name="Produk Celana" parent="vellas_akomodasi_menu_categ" action="vellas_celana_action" sequence="20"/>
+
+</odoo>

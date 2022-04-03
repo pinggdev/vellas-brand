@@ -30,6 +30,7 @@
         'views/templates.xml',
         'views/menu.xml',
         'views/baju_views.xml',
+        'views/celana_views.xml',
         'views/pegawai_views.xml',
         'views/pelanggan_views.xml',
         'views/penjualan_views.xml',
