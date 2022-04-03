@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- vellas.baju tree view -->
+    <record id="vellas_baju_view_tree" model="ir.ui.view">
+        <field name="name">Daftar Produk Baju</field>
+        <field name="model">vellas.baju</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="kode_baju"/>
+                <field name="name"/>
+                <field name="tipe_baju"/>
+                <field name="ukuran_baju"/>
+                <field name="jenis_bahan"/>
+                <field name="harga"/>
+                <field name="stok"/>
+                <field name="keterangan"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- vellas.baju form view -->
+    <record id="vellas_baju_view_form" model="ir.ui.view">
+        <field name="name">Form Produk Baju</field>
+        <field name="model">vellas.baju</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="kode_baju"/>
+                        <field name="name"/>
+                        <field name="tipe_baju"/>
+                        <field name="ukuran_baju"/>
+                        <field name="jenis_bahan"/>
+                        <field name="harga"/>
+                        <field name="stok"/>
+                        <field name="keterangan"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- vellas.baju action window -->
+    <record id="vellas_baju_action" model="ir.actions.act_window">
+        <field name="name">Daftar Produk Baju</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">vellas.baju</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="vellas_baju_menu_act" name="Produk Baju" parent="vellas_akomodasi_menu_categ" action="vellas_baju_action" sequence="10"/>
+
+</odoo>
