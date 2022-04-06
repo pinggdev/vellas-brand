@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="report_vellas_penjualan" model="ir.actions.report">
+        <field name="name">Report Penjualan Produk</field>
+        <field name="model">vellas.penjualan</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">vellas_brand.report_vellas_penjualan</field>
+        <field name="report_file">vellas_brand.report_vellas_penjualan</field>
+        <field name="binding_model_id" ref="model_vellas_penjualan"/>
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>
