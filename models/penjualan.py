@@ -47,7 +47,7 @@ class PenjualanBajuDetail(models.Model):
     def create(self,vals):
         record = super(PenjualanBajuDetail, self).create(vals) 
         if record.qty:
-            self.env['vellas.baju'].search([('id','=',record.baju.id.id)]).write({'stok':record.baju_id.stok-record.qty})
+            self.env['vellas.baju'].search([('id','=',record.baju_id.id)]).write({'stok':record.baju_id.stok-record.qty})
             return record
 
 class PenjualanCelanaDetail(models.Model):
@@ -76,7 +76,7 @@ class PenjualanCelanaDetail(models.Model):
     def create(self,vals):
         record = super(PenjualanCelanaDetail, self).create(vals) 
         if record.qty:
-            self.env['vellas.celana'].search([('id','=',record.celana.id.id)]).write({'stok':record.celana_id.stok-record.qty})
+            self.env['vellas.celana'].search([('id','=',record.celana_id.id)]).write({'stok':record.celana_id.stok-record.qty})
             return record
 
 
