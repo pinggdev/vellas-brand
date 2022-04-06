@@ -35,6 +35,7 @@
         'views/pelanggan_views.xml',
         'views/penjualan_views.xml',
         'views/pembayaran_views.xml',
+        'views/akunting_views.xml',
         'report/report.xml',
         'report/penjualan_report.xml',
     ],

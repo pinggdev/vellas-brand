@@ -32,5 +32,11 @@ class Pembayaran(models.Model):
         record = super(Pembayaran, self).create(vals) 
         if record.tanggal_bayar:
             self.env['vellas.penjualan'].search([('id','=',record.penjualan_id.id)]).write({'sudah_bayar':True})
+            self.env['vellas.akunting'].create({'kredit' : record.total, 'name' : record.name})
             return record
+
+    def unlink(self):
+        for x in self:
+            self.env['vellas.penjualan'].search([('id', '=', x.penjualan_id.id)]).write({'sudah_bayar':False})
+        record = super(Pembayaran, self).unlink()
     

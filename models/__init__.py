@@ -6,3 +6,4 @@ from . import celana
 from . import res_partner
 from . import penjualan
 from . import pembayaran
+from . import akunting

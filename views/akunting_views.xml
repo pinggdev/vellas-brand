@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- vellas.akunting tree view -->
+    <record id="vellas_akunting_view_tree" model="ir.ui.view">
+        <field name="name">vellas.akunting.view.tree</field>
+        <field name="model">vellas.akunting</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="date"/>
+                <field name="debet"/>
+                <field name="kredit"/>
+                <field name="saldo"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- vellas.akunting action window -->
+    <record id="vellas_akunting_action" model="ir.actions.act_window">
+        <field name="name">vellas.akunting.action</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">vellas.akunting</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="vellas_akunting_menu_act" name="Akunting" parent="vellas_menu_root" action="vellas_akunting_action" sequence="40"/>
+
+</odoo>
