@@ -34,6 +34,7 @@
         'views/pegawai_views.xml',
         'views/pelanggan_views.xml',
         'views/penjualan_views.xml',
+        'views/pembayaran_views.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

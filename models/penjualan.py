@@ -20,6 +20,12 @@ class Penjualan(models.Model):
             b = sum(self.env['vellas.penjualancelanadetail'].search([('penjualanc_id', '=', record.id)]).mapped('harga_total'))
             record.total = a + b
 
+    sudah_bayar = fields.Boolean(string='Sudah Bayar', default=False)
+
+    def pembayaran_produk(self):
+        pass
+    
+
 
 class PenjualanBajuDetail(models.Model):
     _name = 'vellas.penjualanbajudetail'

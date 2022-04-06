@@ -12,6 +12,7 @@
                 <field name="tanggal"/>
                 <field name="pelanggan_id"/>
                 <field name="total"/>
+                <field name="sudah_bayar"/>
                 <field name="penjualanbajudetail_ids"/>
                 <field name="penjualancelanadetail_ids"/>
             </tree>
@@ -31,6 +32,7 @@
                         <field name="tanggal"/>
                         <field name="pelanggan_id"/>
                         <field name="total"/>
+                        <field name="sudah_bayar"/>
                         <field name="penjualanbajudetail_ids">
                             <tree editable='bottom'>
                                 <field name="baju_id"/>

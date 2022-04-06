@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- vellas.pembayaran tree view -->
+    <record id="vellas_pembayaran_view_tree" model="ir.ui.view">
+        <field name="name">Daftar Pembayaran</field>
+        <field name="model">vellas.pembayaran</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="penjualan_id"/>
+                <field name="name"/>
+                <field name="tanggal_bayar"/>
+                <field name="total"/>
+                <field name="metode_bayar"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- vellas.pembayaran form view -->
+    <record id="vellas_pembayaran_view_form" model="ir.ui.view">
+        <field name="name">Form Pembayaran</field>
+        <field name="model">vellas.pembayaran</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="penjualan_id"/>
+                        <field name="name"/>
+                    </group>
+                    <group>
+                        <field name="tanggal_bayar"/>
+                    </group>
+                    <group>
+                        <field name="total"/>
+                        <field name="metode_bayar"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- vellas.pembayaran action window -->
+    <record id="vellas_pembayaran_action" model="ir.actions.act_window">
+        <field name="name">Pembayaran</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">vellas.pembayaran</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="vellas_pembayaran_menu_act" name="Pembayaran" parent="vellas_order_menu_categ" action="vellas_pembayaran_action" sequence="20"/>
+
+</odoo>
