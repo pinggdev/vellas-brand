@@ -1,5 +1,5 @@
 from odoo import api, fields, models
-
+from odoo.exceptions import ValidationError
 
 class Penjualan(models.Model):
     _name = 'vellas.penjualan'
@@ -26,10 +26,18 @@ class PenjualanBajuDetail(models.Model):
     _description = 'New Description'
 
     penjualan_id = fields.Many2one(comodel_name='vellas.penjualan', string='Penjualan')
-    baju_id = fields.Many2one(comodel_name='vellas.baju', string='Baju')
+    baju_id = fields.Many2one(comodel_name='vellas.baju', string='Baju', domain=[('stok', '>', '1')])
 
     name = fields.Char(string='Name')
     qty = fields.Integer(string='Kuantitas')
+
+    @api.constrains('qty')
+    def _check_stok(self):
+        for record in self:
+            bahan = self.env['vellas.baju'].search([('stok', '<',record.qty),('id', '=',record.id)])
+            if bahan:
+                raise ValidationError("Stok baju yang dipilih tidak cukup")
+
     harga_satuan = fields.Integer(compute='_compute_harga_satuan', string='Harga Satuan')
     harga_total = fields.Integer(compute='_compute_harga_total', string='Harga Total')
     
