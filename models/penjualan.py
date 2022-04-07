@@ -22,8 +22,20 @@ class Penjualan(models.Model):
 
     sudah_bayar = fields.Boolean(string='Sudah Bayar', default=False)
 
-    def pembayaran_produk(self):
-        pass
+    def invoice(self):
+        invoices = self.env['account.move'].create({
+            'move_type': 'out_invoice',
+            'partner_id': self.pelanggan_id,
+            'invoice_date': self.tanggal,
+            'invoice_line_ids': [(0, 0, {
+                'product_id': 0,
+                'quantity': 1,
+                'price_unit': self.total,
+                'price_subtotal': self.total
+            })]
+        })
+        self.sudah_bayar = True
+        return invoices
     
 
 

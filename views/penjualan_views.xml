@@ -7,6 +7,9 @@
         <field name="model">vellas.penjualan</field>
         <field name="arch" type="xml">
             <tree>
+                <header>
+                    <button name="invoice" string="Masuk Akunting Module" type="object" class="oe_highlight"/>
+                </header>
                 <!-- Add your fields here -->
                 <field name="name"/>
                 <field name="tanggal"/>
